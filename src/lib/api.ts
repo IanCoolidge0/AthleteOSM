@@ -2,7 +2,7 @@ import { env } from '$env/dynamic/private';
 import type { ActivityStats, StravaSession, SummaryActivity } from "./types";
 
 export const getStravaRedirectURI = () => {
-    const prefix = (env.NODE_ENV === 'development') ? 'http://localhost:5173' : 'https://strava-osm.vercel.app';
+    const prefix = (env.NODE_ENV === 'development') ? 'http://localhost:5173' : 'https://athlete-osm.vercel.app';
     return `${prefix}/auth/redirect`;
 }
 

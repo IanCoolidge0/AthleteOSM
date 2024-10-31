@@ -5,7 +5,7 @@ import type { PageServerLoad } from "./auth/signin/$types";
 import polyline from '@mapbox/polyline';
 
 export const load: LayoutServerLoad = async (event) => {
-    if (!event.locals.username) {
+    if (!event.locals.access_token) {
         if (!event.url.pathname.startsWith('/auth')) {
             return redirect(302, '/auth/login');
         } else {
